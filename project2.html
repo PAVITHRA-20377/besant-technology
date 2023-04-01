@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>project 2</title>
+        <style>
+            #pa1{
+                display: grid;
+                grid-template-columns: 45% 50%;
+                grid-gap: 10px;
+                height: 150%;
+                
+                
+            }
+            #pa2{
+                height: 150%;
+                top: 5px;
+                bottom: 10px;
+                
+            }
+            .cc1{
+                background-color: darksalmon;
+                text-align: center;
+                position: relative;
+                height: 150%;  
+                margin: 10px;
+            }
+            #label1{
+                display: grid;
+                grid-template-columns: 30% 30% 30%;
+                grid-gap: 10px;
+            }
+            #label2{
+                display: grid;
+                grid-template-columns: 45% 45% ;
+                grid-gap: 20px;
+               
+            }
+            #label3{
+                display: grid;
+                grid-template-columns: 45% 45% ;
+                grid-gap: 20px;
+            }
+            #label4{
+                display: grid;
+                grid-template-columns: 40% 40%;
+                grid-gap: 50px;
+                width: 300px;
+                text-align: center;
+                padding-left:130px;  
+            }
+            #gowsi{
+                display: block;
+            }
+            #madhu:hover{
+                background-color: blueviolet;
+            }
+            #madhu{
+                border-radius: 10px;
+                padding: 5px;
+            }
+
+            #alagu{
+                display: block;
+                border-radius: 10px;
+                padding: 5px;
+            }
+            #alagu:hover{
+                background-color: blueviolet;
+                
+            }
+        </style>
+    </head>
+    <body>
+
+        <div id="pa1">
+            <div class="cc1">
+                <br><br><br><br><br><br><br><br><br>
+                <h2>Welcome</h2>
+                <p>to</p>
+                <h1>M.VERVE</h1>
+                <p>Inspired Applications</p>
+                <p>To connect with us please enter the details</p>
+            </div>
+    <form onsubmit="formvalidation()" id="gowsi" >
+        <div id="pa2">
+            <h3>Create an account</h3>
+        <div id="label1">
+            <div>
+                <label>First Name</label><br><br>
+                <input type="text" placeholder="First Name" id="tx1" required><br><br>
+            </div>
+            <div>
+                <label>Last Name</label><br><br>
+                <input type="text" placeholder="Last Name" id="tx2" required><br><br>
+            </div>
+            <div>
+                <label>Age</label><br><br>
+                <input type="text" placeholder="18-100" id="tx3" required><br><br>
+            </div>
+        </div>
+        <div id="label2">
+            <div>
+                <label>Mobile Number</label><br><br>
+                <input style="width: 80%;" type="text" placeholder="----------" id="tx4" required><br><br>
+            </div>
+            <div>
+                <label>Email</label><br><br>
+                <input  style="width: 80%;" type="text" placeholder="abc@xxx.zzz" id="tx5" required>
+                <br><br>
+            </div>
+        </div>
+                <label >Description</label>
+                <br><br>
+                <textarea style="width: 85%; height: 20%;" id="tx6" required></textarea>
+                <br><br>
+        <div id="label3">
+            <div>
+                <label>password</label><br><br>
+                <input style="width: 80%;"  type="password" placeholder="enter password" id="tx7" required><br><br>
+            </div>
+            <div>
+                <label>Confirm password</label><br><br>
+                <input  style="width: 80%;" type="text" placeholder="enter password" id="tx8" required><br><br>
+            </div>
+        </div>
+            <div id="label4">
+                <button id="alagu">Reset</button>
+                <button onclick="lname()" id="madhu">Submit</button>
+            </div>
+        </div>
+    </div>
+</form>
+    </body>
+    <script>
+        function formvalidation(){
+                var v1=document.getElementById("tx1").value
+                var v2=document.getElementById("tx2").value
+                var v3=document.getElementById("tx3").value
+                var v4=document.getElementById("tx4").value
+                var v5=document.getElementById("tx5").value
+                var v6=document.getElementById("tx6").value
+                var v7=document.getElementById("tx7").value
+                var v8=document.getElementById("tx8").value
+                
+                if(v1.length<5){
+                    alert("name must be define >6 characters")
+                }
+                else if(v4.length<10){
+                    alert("phone no must have 10 digits")
+                }
+                else{
+                    alert("your information submited")
+                }     
+            }
+            const button=document.getElementById("madhu")
+                const ss=document.getElementById("gowsi")
+                function lname(){
+                    ss.style.display="block"
+                }
+                const reset= document.getElementById("alagu")
+                reset.onclick=function(){
+                    ss.style.display="block"
+                }
+    </script>
+
+</html>
